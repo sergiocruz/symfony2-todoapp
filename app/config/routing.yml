@@ -1,0 +1,6 @@
+cruz_todo:
+    resource: "@CruzTodoBundle/Resources/config/routing.php"
+    prefix:   /
+    resource: "@CruzTodoBundle/Controller/PostController.php"
+    type: annotation
+

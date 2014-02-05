@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: /media/psf/Home/Sites/cruzcorp/todo/app/config/routing_dev.yml

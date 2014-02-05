@@ -1,0 +1,34 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}CruzTodoBundle:Post:create{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/cruz/css/todo.css') }}" />
+{% endblock %}
+
+{% block javascripts %}
+	<script src="{{ asset('vendor/angularjs/angular.min.js') }}"></script>
+    <script src="{{ asset('bundles/cruz/js/todo.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div ng-app="todoapp" ng-controller="TodoController">
+	<h1>List of Todos</h1>
+	<div class="well well-lg">
+		<form role="form">
+			<div class="form-group" style="margin-bottom: 0;">
+				<div class="input-group input-group-lg">
+					<input type="text" class="form-control" placeholder="New todo">
+					<span class="input-group-btn">
+						<button class="btn btn-lg btn-primary" type="button">Create!</button>
+					</span>
+				</div><!-- /input-group -->
+			</div>
+		</form>
+	</div>
+
+	<ul>
+		<li ng-repeat="todo in todos">{{todo}}</li>
+	</ul>
+</div><!-- /TodoController -->
+{% endblock %}
