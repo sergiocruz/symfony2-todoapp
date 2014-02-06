@@ -1,2 +1,5 @@
-vendor/
-svr/
+vendor/*
+composer.phar
+.idea/*
+app/config/local/
+svr/*
