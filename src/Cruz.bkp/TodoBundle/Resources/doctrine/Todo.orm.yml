@@ -1,0 +1,16 @@
+Cruz\TodoBundle\Entity\Todo:
+    type: entity
+    table: todo
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        text:
+            type: string
+            length: 255
+        completed:
+            type: boolean
+        added:
+            type: datetime

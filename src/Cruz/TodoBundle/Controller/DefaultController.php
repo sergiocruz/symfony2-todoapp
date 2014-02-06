@@ -3,11 +3,19 @@
 namespace Cruz\TodoBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
+use Cruz\TodoBundle\Entity\Todo;
 
 class DefaultController extends Controller
 {
-    public function indexAction($name)
+    /**
+     * @Route("")
+     * @Template()
+     */
+    public function indexAction($name = null)
     {
-        return $this->render('CruzTodoBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('TodoBundle:Default:index.html.twig');
     }
 }

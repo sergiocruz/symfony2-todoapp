@@ -77,7 +77,6 @@
   'SwiftmailerBundle:Collector:swiftmailer.html.twig' => '/media/psf/Home/Sites/cruzcorp/todo/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Resources/views/Collector/swiftmailer.html.twig',
   'DoctrineBundle:Collector:db.html.twig' => '/media/psf/Home/Sites/cruzcorp/todo/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Resources/views/Collector/db.html.twig',
   'DoctrineBundle:Collector:explain.html.twig' => '/media/psf/Home/Sites/cruzcorp/todo/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Resources/views/Collector/explain.html.twig',
-  'CruzTodoBundle:Default:index.html.twig' => '/media/psf/Home/Sites/cruzcorp/todo/src/Cruz/TodoBundle/Resources/views/Default/index.html.twig',
-  'CruzTodoBundle:Post:create.html.twig' => '/media/psf/Home/Sites/cruzcorp/todo/src/Cruz/TodoBundle/Resources/views/Post/create.html.twig',
+  'TodoBundle:Default:index.html.twig' => '/media/psf/Home/Sites/cruzcorp/todo/src/Cruz/TodoBundle/Resources/views/Default/index.html.twig',
   '::base.html.twig' => '/media/psf/Home/Sites/cruzcorp/todo/app/Resources/views/base.html.twig',
 );

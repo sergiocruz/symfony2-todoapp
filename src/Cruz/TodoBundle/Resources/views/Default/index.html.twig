@@ -1,1 +1,45 @@
-Hello {{ name }}! :)
+{% extends "::base.html.twig" %}
+
+{% block title %}To-Do App{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/cruz/css/todo.css') }}" />
+{% endblock %}
+
+{% block javascripts %}
+	<script src="{{ asset('vendor/angularjs/angular.min.js') }}"></script>
+	<script src="{{ asset('vendor/angularjs/angular-resource.js') }}"></script>
+	<script src="{{ asset('bundles/cruz/js/todo-app.js') }}"></script>
+    <script src="{{ asset('bundles/cruz/js/todo-service.js') }}"></script>
+    <script src="{{ asset('bundles/cruz/js/todo-ctrl.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div ng-app="todoApp" ng-controller="todoCrl">
+	<h1>List of To-Dos</h1>
+	<div class="well well-lg">
+		<form role="form" ng-submit="addTodo()">
+			<div class="form-group" style="margin-bottom: 0;">
+				<div class="input-group input-group-lg">
+					<input type="text" class="form-control" placeholder="New To-Do" ng-model="todoText" maxlength="40" autofocus>
+					<span class="input-group-btn">
+						<button class="btn btn-lg btn-primary" type="submit">Create!</button>
+					</span>
+				</div><!-- /input-group -->
+			</div>
+		</form>
+	</div>
+
+	<ul class="todos list-unstyled" ng-class="{loaded: isLoaded}">
+		<li ng-repeat="todo in todos">
+			<div class="checkbox" ng-class="{completed: todo.completed}">
+				<label>
+					<input type="checkbox" ng-model="todo.completed" ng-change="setCompleted(todo)">
+					<span ng-bind="todo.text"></span>
+				</label>
+				<a href="javascript:;" ng-show="todo.completed" ng-click="deleteTodo(todo)">Delete</a>
+			</div>
+		</li>
+	</ul>
+</div><!-- /TodoController -->
+{% endblock %}

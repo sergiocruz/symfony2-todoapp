@@ -1,6 +1,11 @@
 cruz_todo:
-    resource: "@CruzTodoBundle/Resources/config/routing.php"
+    resource: "@TodoBundle/Resources/config/routing.php"
     prefix:   /
-    resource: "@CruzTodoBundle/Controller/PostController.php"
+    resource: "@TodoBundle/Controller/DefaultController.php"
     type: annotation
 
+cruz_api:
+    resource: "@TodoBundle/Resources/config/routing.php"
+    prefix:   /api
+    resource: "@TodoBundle/Controller/ApiController.php"
+    type: annotation
