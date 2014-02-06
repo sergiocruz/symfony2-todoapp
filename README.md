@@ -1,4 +1,4 @@
-Todo App
+To-Do App
 ========================
 
 Powered by Symfony2.
